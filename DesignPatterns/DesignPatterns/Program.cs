@@ -2,6 +2,7 @@
 using DesignPatterns.CreationalPatterns.SingletonPattern;
 using DesignPatterns.StructuralPatterns.AdapterPattern;
 using DesignPatterns.StructuralPatterns.CompositePattern;
+using DesignPatterns.StructuralPatterns.FacadePattern;
 using System;
 
 namespace DesignPatterns
@@ -20,8 +21,12 @@ namespace DesignPatterns
             AdapterClient.CallAdapter();
 
             //Composite pattern
-            CardClient client = new CardClient();
-            client.CallComposite();
+            CardClient cardClient = new CardClient();
+             cardClient.CallComposite();
+
+            //Fascade pattern
+            FacadeClient facadeClient = new FacadeClient();
+            facadeClient.CallFacade();
 
             Console.ReadKey();
         }
